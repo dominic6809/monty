@@ -1,18 +1,19 @@
 #include "monty.h"
+
 /**
-* free_stack - frees a DLL
-* @head: head of the stack
-* Return: null
+* free_stack - function that frees a Doubly Linked List
+* @head: head stack
+*
+* Return: Null, sucessful
 */
 void free_stack(stack_t *head)
 {
 	stack_t *aux;
 
 	aux = head;
-	while (head)
+	for (; head; head = aux)
 	{
-		aux = head->next;
-		free(head);
-		head = aux;
+	    aux = head->next;
+	    free(head);
 	}
 }
