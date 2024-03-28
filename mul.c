@@ -9,7 +9,7 @@
  * Return: void
 */
 
-void f_mul(stack_t **head, unsigned int counter)
+void f_mul(stack_t **head, unsigned int num_digit)
 {
 	stack_t *u;
 	int val = 0, aux;
@@ -22,7 +22,7 @@ void f_mul(stack_t **head, unsigned int counter)
 	}
 	if (val < 2)
 	{
-		fprintf(stderr, "L%d: can't mul, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't mul, stack too short\n", num_digit);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
