@@ -32,10 +32,10 @@ int main(int argc, char *argv[])
 		line_content = NULL;
 		read_result = getline(&line_content, &line_size, monty_file);
 		bus.content = line_content;
-		counter++;
+		num_digit++;
 		if (read_result > 0)
 		{
-			execute(line_content, &stack, counter, monty_file);
+			execute(line_content, &stack, num_digit, monty_file);
 		}
 		free(line_content);
 	}
