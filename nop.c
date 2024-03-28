@@ -1,9 +1,11 @@
 #include "monty.h"
+
 /**
-  *f_nop- nothing
-  *@head: stack head
-  *@counter: line_number
-  *Return: null
+  *f_nop- Implements the nop opcode.
+  *@head: top element in the stack
+  *@counter: number of lines present
+  *
+  *Return: NULL after compilation if successful
  */
 void f_nop(stack_t **head, unsigned int counter)
 {
