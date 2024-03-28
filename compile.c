@@ -29,7 +29,6 @@ void execute(char *line_content, stack_t **stack,
 
 	if (op_code && op_code[0] == '#')
 		return;
-
 	bus.arg = strtok(NULL, " \n\t");
 
 	for (i = 0; opcode_func[i].opcode; i++)

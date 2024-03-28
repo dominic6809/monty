@@ -7,8 +7,8 @@
  */
 void process_pint_err(unsigned int line_num)
 {
-    fprintf(stderr, "L%u: can't pint, stack empty\n", line_num);
-    exit(EXIT_FAILURE);
+	fprintf(stderr, "L%u: can't pint, stack empty\n", line_num);
+	exit(EXIT_FAILURE);
 }
 
 /**
@@ -18,8 +18,8 @@ void process_pint_err(unsigned int line_num)
  */
 void process_pop_err(unsigned int line_num)
 {
-    fprintf(stderr, "L%u: can't pop an empty stack\n", line_num);
-    exit(EXIT_FAILURE);
+	fprintf(stderr, "L%u: can't pop an empty stack\n", line_num);
+	exit(EXIT_FAILURE);
 }
 
 /**
@@ -29,8 +29,8 @@ void process_pop_err(unsigned int line_num)
  */
 void process_swap_err(unsigned int line_num)
 {
-    fprintf(stderr, "L%u: can't swap, stack too short\n", line_num);
-    exit(EXIT_FAILURE);
+	fprintf(stderr, "L%u: can't swap, stack too short\n", line_num);
+	exit(EXIT_FAILURE);
 }
 
 /**
@@ -40,8 +40,8 @@ void process_swap_err(unsigned int line_num)
  */
 void process_add_err(unsigned int line_num)
 {
-    fprintf(stderr, "L%u: can't add, stack too short\n", line_num);
-    exit(EXIT_FAILURE);
+	fprintf(stderr, "L%u: can't add, stack too short\n", line_num);
+	exit(EXIT_FAILURE);
 }
 
 /**
@@ -51,6 +51,6 @@ void process_add_err(unsigned int line_num)
  */
 void process_sub_err(unsigned int line_num)
 {
-    fprintf(stderr, "L%u: can't sub, stack too short\n", line_num);
-    exit(EXIT_FAILURE);
+	fprintf(stderr, "L%u: can't sub, stack too short\n", line_num);
+	exit(EXIT_FAILURE);
 }
