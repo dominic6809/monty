@@ -4,7 +4,7 @@
  * mod_op - Computes the rest of the division of the second top element
  * of the stack by the top element of the stack.
  * @stack: Double pointer to the beginning of the stack
- * @line_number: The current line number in the Monty file
+ * @num_digit: The current line number in the Monty file
  */
 void mod(stack_t **head, unsigned int num_digit)
 {
