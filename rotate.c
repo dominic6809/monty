@@ -1,10 +1,10 @@
 #include "monty.h"
+
 /**
  * rotl_op - rotates the stack to the top.
  * @stack: Double pointer to the beginning of the stack
  * @num_digit: The current line number in the Monty file
  */
-
 void rotl(stack_t **head, unsigned int num_digit)
 {
     stack_t *current, *new_top;
