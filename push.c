@@ -2,7 +2,7 @@
 /**
  * f_push - function to add node to the stack
  * @head: overhead stak
- * @counter: number of lines
+ * @num_digit: number of lines
  * Return: NULL, sucess, error elsewhere
 */
 void f_push(stack_t **head, unsigned int num_digit)
