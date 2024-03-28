@@ -9,7 +9,7 @@
  * Return: Returns 0 on successful execution, 1 on failure
  */
 void execute(char *line_content, stack_t **stack,
-             unsigned int line_counter, FILE *monty_file)
+		unsigned int line_counter, FILE *monty_file)
 {
 	instruction_t opcode_func[] = {
 		{"push", process_push}, {"pall", process_pall},
