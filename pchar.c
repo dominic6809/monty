@@ -3,7 +3,7 @@
 /**
  * pchar_op - function that prints the char at the top of the stack.
  * @stack: Double pointer to the beginning of the stack
- * @line_number: The current line number in the Monty file
+ * @num_digit: The current line number in the Monty file
  */
 void pchar(stack_t **head, unsigned int num_digit)
 {
