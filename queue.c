@@ -1,22 +1,22 @@
 #include "monty.h"
 /**
- * addqueue - add node to the tail stack
- * @n: new_value
- * @head: head of the stack
- * Return: null
+ * addqueue - a function to add node at the bottom of stack
+ * @n: the new value to be added
+ * @head: stack head
+ * Return: none, if successful, otherwise error
 */
 void addqueue(stack_t **head, int n)
 {
-	stack_t *new_node, *aux;
+	stack_t *new_n, *aux;
 
 	aux = *head;
-	new_node = malloc(sizeof(stack_t));
-	if (new_node == NULL)
+	new_n = malloc(sizeof(stack_t));
+	if (new_n == NULL)
 	{
 		printf("Error\n");
 	}
-	new_node->n = n;
-	new_node->next = NULL;
+	new_n->n = n;
+	new_n->next = NULL;
 	if (aux)
 	{
 		while (aux->next)
@@ -24,12 +24,12 @@ void addqueue(stack_t **head, int n)
 	}
 	if (!aux)
 	{
-		*head = new_node;
-		new_node->prev = NULL;
+		*head = new_n;
+		new_n->prev = NULL;
 	}
 	else
 	{
-		aux->next = new_node;
-		new_node->prev = aux;
+		aux->next = new_n;
+		new_n->prev = aux;
 	}
 }
