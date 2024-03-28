@@ -1,12 +1,14 @@
 #include "monty.h"
+
 /**
-* execute - executes the main function
-* @stack: head of DLL stack
+* execute - function to executes the main function
+* @stack: head of Doubly linked list stack
 * @counter: line_counter
-* @monty_file: poiner to monty file
-* @line_content: line content
-* Return: no return
+* @monty_file: a poiner to monty file
+* @line_content: contents of the line
+* Return: 1 sucess
 */
+
 int execute(char *line_content, stack_t **stack,
 		unsigned int counter, FILE *monty_file)
 {
