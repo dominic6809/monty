@@ -3,6 +3,8 @@
 /**
  * pstr_op - function to print the string starting at the top of the stack.
  * @stack: Double pointer to the beginning of the stack
+ * @head: stack head
+ * pstr - print the string starting at the top of the stack
  * @num_digit: The current line number in the Monty file
  */
 void pstr(stack_t **head, unsigned int num_digit)
