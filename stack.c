@@ -7,9 +7,9 @@
  * Return: sucess NULL, -1 error
 */
 
-void f_stack(stack_t **head, unsigned int counter)
+void f_stack(stack_t **head, unsigned int num_digit)
 {
 	(void)head;
-	(void)counter;
+	(void)num_digit;
 	bus.lifi = 0;
 }
