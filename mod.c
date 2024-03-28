@@ -3,6 +3,8 @@
 /**
  * mod_op - Computes the rest of the division of the second top element
  * of the stack by the top element of the stack.
+ * @head: head of the stack
+ *@mod: modulus of two integers
  * @stack: Double pointer to the beginning of the stack
  * @num_digit: The current line number in the Monty file
  */
