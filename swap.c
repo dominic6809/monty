@@ -3,7 +3,7 @@
 /**
  * f_swap - function that adds the top two elements of the stack.
  * @head: stack head to point to the next
- * @counter: number of lines
+ * @num_digit: number of lines
  *
  * Return: NULL success
 */
