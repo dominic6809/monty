@@ -14,8 +14,8 @@ void mod(stack_t **head, unsigned int num_digit)
     {
         fprintf(stderr, "L%d: cannot mod, stack too short\n", num_digit);
         fclose(bus.file);
-		free(bus.content);
-		free_stack(*head);
+	free(bus.content);
+	free_stack(*head);
         exit(EXIT_FAILURE);
     }
 
@@ -26,8 +26,8 @@ void mod(stack_t **head, unsigned int num_digit)
     {
         fprintf(stderr, "L%d: division by zero\n", num_digit);
         fclose(bus.file);
-		free(bus.content);
-		free_stack(*head);
+	free(bus.content);
+	free_stack(*head);
         exit(EXIT_FAILURE);
     }
 
