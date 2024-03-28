@@ -5,9 +5,9 @@
  * @stack: Double pointer to the beginning of the stack
  * @line_number: The current line number in the Monty file
  */
-void pstr_op(stack_t **stack, unsigned int line_number)
+void pstr(stack_t **head, unsigned int num_digit)
 {
-    stack_t *current = *stack;
+    stack_t *current = *head;
 
     (void)num_digit;
 
