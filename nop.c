@@ -7,8 +7,8 @@
   *
   *Return: NULL after compilation if successful
  */
-void f_nop(stack_t **head, unsigned int counter)
+void f_nop(stack_t **head, unsigned int num_digit)
 {
-	(void) counter;
+	(void) num_digit;
 	(void) head;
 }
