@@ -1,49 +1,50 @@
 #include "monty.h"
-
 /**
- * execute - Executes Monty bytecode instructions from a file
- * @line_content: Line content from the Monty file
- * @stack: Pointer to the stack of integers
- * @line_counter: Current line number in the Monty file
- * @monty_file: Pointer to the Monty file being processed
- *
- * Return: void
- */
-void execute(char *line_content, stack_t **stack,
-		unsigned int line_counter, FILE *monty_file)
+* execute - executes the main function
+* @stack: head of DLL stack
+* @counter: line_counter
+* @monty_file: poiner to monty file
+* @line_content: line content
+* Return: no return
+*/
+int execute(char *line_content, stack_t **stack,
+		unsigned int counter, FILE *monty_file)
 {
-	static instruction_t opcode_func[] = {
-		{"push", process_push}, {"pall", process_pall},
-		{"pint", process_pint}, {"pop", process_pop},
-		{"swap", process_swap}, {"add", process_add},
-		{"nop", process_nop},   {"sub", process_sub},
-		{"div", process_div},   {"mul", process_mul},
-		{"mod", process_mod},   {"pchar", process_pchar},
-		{"rotr", process_rotr}, {"queue", process_queue},
-		{"stack", process_stack}, {NULL, NULL}
-	};
-
+	instruction_t opst[] = {
+				{"push", f_push},
+				{"pall", f_pall},
+				{"pint", f_pint},
+				{"pop", f_pop},
+				{"swap", f_swap},
+				{"add", f_add},
+				{"nop", f_nop},
+				{"queue", f_queue},
+				{"stack", f_stack},
+				{"sub", f_sub},
+				{"div", f_div},
+				{"mul", f_mul},
+				{NULL, NULL}
+				};
 	unsigned int i = 0;
-	char *op_code = strtok(line_content, " \n\t");
+	char *opcode;
 
-	if (!op_code || op_code[0] == '#')
-		return;
-
+	opcode = strtok(line_content, " \n\t");
+	if (opcode && opcode[0] == '#')
+		return (0);
 	bus.arg = strtok(NULL, " \n\t");
-
-	while (opcode_func[i].opcode)
+	while (opst[i].opcode && opcode)
 	{
-		if (strcmp(op_code, opcode_func[i].opcode) == 0)
-		{
-			opcode_func[i].f(stack, line_counter);
-			return;
+		if (strcmp(opcode, opst[i].opcode) == 0)
+		{	opst[i].f(stack, counter);
+			return (0);
 		}
 		i++;
 	}
-	fprintf(stderr, "L%d: unknown instruction %s\n",
-			line_counter, op_code);
-	fclose(monty_file);
-	free(line_content);
-	process_free_stack(*stack);
-	exit(EXIT_FAILURE);
+	if (opcode && opst[i].opcode == NULL)
+	{ fprintf(stderr, "L%d: unknown instruction %s\n", counter, opcode);
+		fclose(monty_file);
+		free(line_content);
+		free_stack(*stack);
+		exit(EXIT_FAILURE); }
+	return (1);
 }
