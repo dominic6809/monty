@@ -16,6 +16,9 @@ void pchar(stack_t **head, unsigned int num_digit)
     if ((*head)->n < 0 || (*head)->n > 127)
     {
         fprintf(stderr, "L%d: cannot pchar, value out of range\n", num_digit);
+        fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
         exit(EXIT_FAILURE);
     }
 
