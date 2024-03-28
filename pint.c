@@ -1,10 +1,12 @@
 #include "monty.h"
+
 /**
- * f_pint - prints the top
- * @head: stack head
- * @counter: line_number
- * Return: no return
+ * f_pint - a function to obtain top element
+ * @head: top element in the stack
+ * @counter: the number of lines used
+ * Return: NULL, if sucessful
 */
+
 void f_pint(stack_t **head, unsigned int counter)
 {
 	if (*head == NULL)
