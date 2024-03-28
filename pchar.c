@@ -9,7 +9,10 @@ void pchar(stack_t **head, unsigned int num_digit)
 {
     if (!stack || !(*head))
     {
-        fprintf(stderr, "L%d: can't pchar, stack empty\n", num_digit);
+        fprintf(stderr, "L%d: cannot pchar, stack empty\n", num_digit);
+	fclose(bus.file);
+	free(bus.content);
+	free_stack(*head);
         exit(EXIT_FAILURE);
     }
 
@@ -17,8 +20,8 @@ void pchar(stack_t **head, unsigned int num_digit)
     {
         fprintf(stderr, "L%d: cannot pchar, value out of range\n", num_digit);
         fclose(bus.file);
-		free(bus.content);
-		free_stack(*head);
+	free(bus.content);
+	free_stack(*head);
         exit(EXIT_FAILURE);
     }
 
