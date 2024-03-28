@@ -5,7 +5,7 @@
   *@counter: the number of lines present
   *Return: none success, otherwise error
  */
-void f_sub(stack_t **head, unsigned int counter)
+void f_sub(stack_t **head, unsigned int num_digit)
 {
 	stack_t *aux;
 	int z, nodes;
@@ -15,7 +15,7 @@ void f_sub(stack_t **head, unsigned int counter)
 		aux = aux->next;
 	if (nodes < 2)
 	{
-		fprintf(stderr, "L%d: cannot subtract, stack too short\n", counter);
+		fprintf(stderr, "L%d: cannot subtract, stack too short\n", num_digit);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
