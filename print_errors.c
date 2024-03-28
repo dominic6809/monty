@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * process_usage_err - prints error message for incorrect command line usage
+ * process_usage_err - shows error message for incorrect command line usage
  */
 void process_usage_err(void)
 {
@@ -10,8 +10,8 @@ void process_usage_err(void)
 }
 
 /**
- * process_f_open_err - prints error message for file opening failure
- * @filename: Name of the file that failed to open
+ * process_f_open_err - gives error message for file opening failure
+ * @filename: Name of the file that did not open
  */
 void process_f_open_err(char *filename)
 {
