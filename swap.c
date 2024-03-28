@@ -8,7 +8,7 @@
  * Return: NULL success
 */
 
-void f_swap(stack_t **head, unsigned int counter)
+void f_swap(stack_t **head, unsigned int num_digit)
 {
 	stack_t *u;
 	int val = 0, aux;
@@ -21,7 +21,7 @@ void f_swap(stack_t **head, unsigned int counter)
 	}
 	if (val < 2)
 	{
-		fprintf(stderr, "L%d: cannot swap, stack too short\n", counter);
+		fprintf(stderr, "L%d: cannot swap, stack too short\n", num_digit);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
