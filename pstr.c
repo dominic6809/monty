@@ -7,14 +7,14 @@
  */
 void pstr(stack_t **head, unsigned int num_digit)
 {
-    stack_t *current = *head;
+	stack_t *current = *head;
 
-    (void)num_digit;
+	(void)num_digit;
 
-    while (current && current->n != 0 && current->n >= 0 && current->n <= 127)
-    {
-        putchar(current->n);
-        current = current->next;
-    }
-    putchar('\n');
+	while (current && current->n != 0 && current->n >= 0 && current->n <= 127)
+	{
+		putchar(current->n);
+		current = current->next;
+	}
+	putchar('\n');
 }
