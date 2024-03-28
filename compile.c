@@ -3,7 +3,7 @@
 /**
 * execute - function to executes the main function
 * @stack: head of Doubly linked list stack
-* @counter: line_counter
+* @num_digit: line_counter
 * @monty_file: a poiner to monty file
 * @line_content: contents of the line
 * Return: 1 sucess
