@@ -4,7 +4,7 @@
  * f_pall - program code to display the stack element
  * @head: top element in the stack
  *
- * @counter: number of line covered by the stack
+ * @num_digit: number of line covered by the stack
  * Return: (NULL), successful, otherwise error
 */
 
