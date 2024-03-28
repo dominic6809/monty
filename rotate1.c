@@ -5,23 +5,23 @@
  * @stack: Double pointer to the beginning of the stack
  * @line_number: The current line number in the Monty file
  */
-void rotr_op(stack_t **stack, unsigned int line_number)
+void rotr(stack_t **head, unsigned int num_digit)
 {
     stack_t *current;
 
     (void)num_digit;
 
-    if (*stack && (*stack)->next)
+    if (*head && (*head)->next)
     {
-        current = *stack;
+        current = *head;
 
         while (current->next)
             current = current->next;
 
         current->prev->next = NULL;
         current->prev = NULL;
-        current->next = *stack;
-        (*stack)->prev = current;
-        *stack = current;
+        current->next = *head;
+        (*head)->prev = current;
+        *head = current;
     }
 }
