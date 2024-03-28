@@ -2,6 +2,8 @@
 
 /**
  * pchar_op - function that prints the char at the top of the stack.
+ * pchar - prints the char at the top of the stack
+ * @head: head of stack
  * @stack: Double pointer to the beginning of the stack
  * @num_digit: The current line number in the Monty file
  */
