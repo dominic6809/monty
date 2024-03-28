@@ -52,7 +52,6 @@ int execute(char *line_content, stack_t **stack,
 		fclose(monty_file);
 		free(line_content);
 		free_stack(*stack);
-		exit(EXIT_FAILURE); 
-	}
+		exit(EXIT_FAILURE); }
 	return (1);
 }
