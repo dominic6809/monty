@@ -5,7 +5,7 @@
  * @counter: number of lines
  * Return: NULL, sucess, error elsewhere
 */
-void f_push(stack_t **head, unsigned int counter)
+void f_push(stack_t **head, unsigned int num_digit)
 {
 	int r, t = 0, index = 0;
 
@@ -18,13 +18,13 @@ void f_push(stack_t **head, unsigned int counter)
 			if (bus.arg[t] > 57 || bus.arg[t] < 48)
 				index = 1; }
 		if (index == 1)
-		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
+		{ fprintf(stderr, "L%d: usage: push integer\n", num_digit);
 			fclose(bus.file);
 			free(bus.content);
 			free_stack(*head);
 			exit(EXIT_FAILURE); }}
 	else
-	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
+	{ fprintf(stderr, "L%d: usage: push integer\n", num_digit);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
