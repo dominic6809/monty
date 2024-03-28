@@ -3,7 +3,7 @@
 /**
  * f_add - function that adds the top two elements of the stack.
  * @head: head stack
- * @counter: number of lines
+ * @num_digit: number of lines
  *
  * Return: NULL, successful
 */
