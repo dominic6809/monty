@@ -1,10 +1,12 @@
 #include "monty.h"
+
 /**
  * addqueue - a function to add node at the bottom of stack
  * @n: the new value to be added
  * @head: stack head
  * Return: none, if successful, otherwise error
 */
+
 void addqueue(stack_t **head, int n)
 {
 	stack_t *new_n, *aux;
