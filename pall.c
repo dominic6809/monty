@@ -8,10 +8,10 @@
  * Return: (NULL), successful, otherwise error
 */
 
-void f_pall(stack_t **head, unsigned int counter)
+void f_pall(stack_t **head, unsigned int num_digit)
 {
 	stack_t *u;
-	(void)counter;
+	(void)num_digit;
 
 	u = *head;
 	if (u == NULL)
