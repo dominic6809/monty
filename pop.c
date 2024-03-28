@@ -3,7 +3,7 @@
 /**
  * f_pop - function to display the top element of the stack
  * @head: head stack
- * @counter: number of lines
+ * @num_digit: number of lines
  * Return: sucess NULL, -1 error
 */
 
