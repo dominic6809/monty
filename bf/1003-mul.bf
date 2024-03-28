@@ -1,4 +1,4 @@
-read from stdin
+read two vlues from stdin
 >, >, <<
 convert atoi
 +++++ +
@@ -28,6 +28,6 @@ convert itoa
  [+++++ +++>]
  <[<]>-
 ]
-print with newline
+print with newline(\n)
 >>[.<<]<[<<]>>.
 >>,. 
