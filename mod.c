@@ -10,23 +10,29 @@ void mod(stack_t **head, unsigned int num_digit)
 {
     stack_t *top, *second_top;
 
-    if (!stack || !(*stack) || !((*stack)->next))
+    if (!stack || !(*head) || !((*head)->next))
     {
         fprintf(stderr, "L%d: cannot mod, stack too short\n", num_digit);
+        fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
         exit(EXIT_FAILURE);
     }
 
-    top = *stack;
+    top = *head;
     second_top = top->next;
 
     if (top->n == 0)
     {
         fprintf(stderr, "L%d: division by zero\n", num_digit);
+        fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
         exit(EXIT_FAILURE);
     }
 
     second_top->n %= top->n;
-    *stack = second_top;
-    (*stack)->prev = NULL;
+    *head = second_top;
+    (*head)->prev = NULL;
     free(top);
 }
