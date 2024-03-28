@@ -7,11 +7,11 @@
  * Return: NULL, if sucessful
 */
 
-void f_pint(stack_t **head, unsigned int counter)
+void f_pint(stack_t **head, unsigned int num_digit)
 {
 	if (*head == NULL)
 	{
-		fprintf(stderr, "L%u: can't pint, stack empty\n", counter);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", num_digit);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
