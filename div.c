@@ -4,7 +4,7 @@
  * f_div - function that divides the top two elements of the stack.
  * @head: head of the stack
  *
- * @counter: number of lines
+ * @num_digit: number of lines
  *
  * Return: NULL, upon successful execution
 */
