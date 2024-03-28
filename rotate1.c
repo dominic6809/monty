@@ -3,7 +3,7 @@
 /**
  * rotr_op - function that rotates the stack to the bottom.
  * @stack: Double pointer to the beginning of the stack
- * @line_number: The current line number in the Monty file
+ * @num_digit: The current line number in the Monty file
  */
 void rotr(stack_t **head, unsigned int num_digit)
 {
