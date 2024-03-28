@@ -10,7 +10,7 @@
 */
 
 int execute(char *line_content, stack_t **stack,
-		unsigned int counter, FILE *monty_file)
+		unsigned int num_digit, FILE *monty_file)
 {
 	instruction_t opst[] = {
 				{"push", f_push},
@@ -25,6 +25,11 @@ int execute(char *line_content, stack_t **stack,
 				{"sub", f_sub},
 				{"div", f_div},
 				{"mul", f_mul},
+				{"mod", f_mod},
+				{"rotl", f_rotl},
+				{"rotr", f_rotr},
+				{"pchar", f_pchar},
+				{"pstr", f_pstr},
 				{NULL, NULL}
 				};
 	unsigned int z = 0;
@@ -37,13 +42,13 @@ int execute(char *line_content, stack_t **stack,
 	while (opst[z].opcode && opcode)
 	{
 		if (strcmp(opcode, opst[z].opcode) == 0)
-		{	opst[z].f(stack, counter);
+		{	opst[z].f(stack, num_digit);
 			return (0);
 		}
 		z++;
 	}
 	if (opcode && opst[z].opcode == NULL)
-	{ fprintf(stderr, "L%d: unknown instruction %s\n", counter, opcode);
+	{ fprintf(stderr, "L%d: unknown instruction %s\n", num_digit, opcode);
 		fclose(monty_file);
 		free(line_content);
 		free_stack(*stack);
