@@ -8,7 +8,7 @@
  * Return: NULL, successful
 */
 
-void f_add(stack_t **head, unsigned int counter)
+void f_add(stack_t **head, unsigned int num_digit)
 {
 	stack_t *u;
 	int val = 0, aux;
@@ -21,7 +21,7 @@ void f_add(stack_t **head, unsigned int counter)
 	}
 	if (val < 2)
 	{
-		fprintf(stderr, "L%d: can't add, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't add, stack too short\n", num_digit);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
@@ -42,9 +42,9 @@ void f_add(stack_t **head, unsigned int counter)
  * Return: NuLl, sucess -1 error
 */
 
-void f_queue(stack_t **head, unsigned int counter)
+void f_queue(stack_t **head, unsigned int num_digit)
 {
 	(void)head;
-	(void)counter;
+	(void)num_digit;
 	bus.lifi = 1;
 }
