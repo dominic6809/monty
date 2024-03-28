@@ -1,14 +1,14 @@
 #include "monty.h"
 /**
-  *f_sub- sustration
-  *@head: stack head
-  *@counter: line_number
-  *Return: no return
+  *f_sub- program to perform subtraction operation
+  *@head: the top stack
+  *@counter: the number of lines present
+  *Return: none success, otherwise error
  */
 void f_sub(stack_t **head, unsigned int counter)
 {
 	stack_t *aux;
-	int k, nodes;
+	int z, nodes;
 
 	aux = *head;
 	for (nodes = 0; aux != NULL; nodes++)
@@ -22,8 +22,8 @@ void f_sub(stack_t **head, unsigned int counter)
 		exit(EXIT_FAILURE);
 	}
 	aux = *head;
-	k = aux->next->n - aux->n;
-	aux->next->n = k;
+	z = aux->next->n - aux->n;
+	aux->next->n = z;
 	*head = aux->next;
 	free(aux);
 }
