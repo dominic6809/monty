@@ -3,7 +3,6 @@
 /**
  * process_usage_err - prints error message for incorrect command line usage
  */
- 
 void process_usage_err(void)
 {
 	fprintf(stderr, "USAGE: monty file\n");
@@ -14,7 +13,6 @@ void process_usage_err(void)
  * process_f_open_err - prints error message for file opening failure
  * @filename: Name of the file that failed to open
  */
- 
 void process_f_open_err(char *filename)
 {
 	fprintf(stderr, "Error: Can't open file %s\n", filename);
@@ -26,7 +24,6 @@ void process_f_open_err(char *filename)
  * @opcode: The unknown opcode encountered
  * @line_num: Line number where the error occurred
  */
- 
 void process_invalid_op_err(char *opcode, unsigned int line_num)
 {
 	fprintf(stderr, "L%u: unknown instruction %s\n", line_num, opcode);
