@@ -5,23 +5,23 @@
  * @line_number: The current line number in the Monty file
  */
 
-void rotl_op(stack_t **stack, unsigned int line_number)
+void rotl(stack_t **head, unsigned int num_digit)
 {
     stack_t *current, *new_top;
 
     (void)num_digit;
 
-    if (*stack && (*stack)->next)
+    if (*head && (*head)->next)
     {
-        current = *stack;
+        current = *head;
         new_top = current->next;
 
         while (current->next)
             current = current->next;
 
-        current->next = *stack;
-        *stack = new_top;
-        (*stack)->prev = NULL;
+        current->next = *head;
+        *head = new_top;
+        (*head)->prev = NULL;
         current->next->prev = current;
     }
 }
