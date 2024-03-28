@@ -2,7 +2,7 @@
 /**
   *f_sub- program to perform subtraction operation
   *@head: the top stack
-  *@counter: the number of lines present
+  *@num_digit: the number of lines present
   *Return: none success, otherwise error
  */
 void f_sub(stack_t **head, unsigned int num_digit)
