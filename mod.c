@@ -6,7 +6,7 @@
  * @stack: Double pointer to the beginning of the stack
  * @line_number: The current line number in the Monty file
  */
-void mod_op(stack_t **stack, unsigned int num_digit)
+void mod(stack_t **head, unsigned int num_digit)
 {
     stack_t *top, *second_top;
 
