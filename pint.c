@@ -3,7 +3,7 @@
 /**
  * f_pint - a function to obtain top element
  * @head: top element in the stack
- * @counter: the number of lines used
+ * @num_digit: the number of lines used
  * Return: NULL, if sucessful
 */
 
