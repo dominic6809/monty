@@ -38,7 +38,7 @@ void f_add(stack_t **head, unsigned int num_digit)
  * f_queue - function to show the tail of stack
  * @head: head stack
  *
- * @counter: number of lines
+ * @num_digit: number of lines
  * Return: NuLl, sucess -1 error
 */
 
