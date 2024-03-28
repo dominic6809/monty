@@ -3,7 +3,7 @@
 /**
  * process_pint_err - Displays error message
  * for attempting to print from an empty stack
- * @num_digit: Line number where the error occurred
+ * @line_num: Line number where the error occurred
  */
 void process_pint_err(unsigned int line_num)
 {
