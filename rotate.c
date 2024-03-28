@@ -7,21 +7,21 @@
  */
 void rotl(stack_t **head, unsigned int num_digit)
 {
-    stack_t *current, *new_top;
+	stack_t *current, *new_top;
 
-    (void)num_digit;
+	(void)num_digit;
 
-    if (*head && (*head)->next)
-    {
-        current = *head;
-        new_top = current->next;
+	if (*head && (*head)->next)
+	{
+		current = *head;
+		new_top = current->next;
 
-        while (current->next)
-            current = current->next;
+		while (current->next)
+			current = current->next;
 
-        current->next = *head;
-        *head = new_top;
-        (*head)->prev = NULL;
-        current->next->prev = current;
-    }
+		current->next = *head;
+		*head = new_top;
+		(*head)->prev = NULL;
+		current->next->prev = current;
+	}
 }
