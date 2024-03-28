@@ -9,7 +9,7 @@
  * Return: NULL, upon successful execution
 */
 
-void f_div(stack_t **head, unsigned int counter)
+void f_div(stack_t **head, unsigned int num_digit)
 {
 	stack_t *u;
 	int val = 0, aux;
@@ -22,7 +22,7 @@ void f_div(stack_t **head, unsigned int counter)
 	}
 	if (val < 2)
 	{
-		fprintf(stderr, "L%d: cannot div, stack too short\n", counter);
+		fprintf(stderr, "L%d: cannot div, stack too short\n", num_digit);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
@@ -31,7 +31,7 @@ void f_div(stack_t **head, unsigned int counter)
 	u = *head;
 	if (u->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zero\n", counter);
+		fprintf(stderr, "L%d: division by zero\n", num_digit);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
