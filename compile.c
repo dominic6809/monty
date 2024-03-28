@@ -27,22 +27,22 @@ int execute(char *line_content, stack_t **stack,
 				{"mul", f_mul},
 				{NULL, NULL}
 				};
-	unsigned int i = 0;
+	unsigned int z = 0;
 	char *opcode;
 
 	opcode = strtok(line_content, " \n\t");
 	if (opcode && opcode[0] == '#')
 		return (0);
 	bus.arg = strtok(NULL, " \n\t");
-	while (opst[i].opcode && opcode)
+	while (opst[z].opcode && opcode)
 	{
-		if (strcmp(opcode, opst[i].opcode) == 0)
-		{	opst[i].f(stack, counter);
+		if (strcmp(opcode, opst[z].opcode) == 0)
+		{	opst[z].f(stack, counter);
 			return (0);
 		}
-		i++;
+		z++;
 	}
-	if (opcode && opst[i].opcode == NULL)
+	if (opcode && opst[z].opcode == NULL)
 	{ fprintf(stderr, "L%d: unknown instruction %s\n", counter, opcode);
 		fclose(monty_file);
 		free(line_content);
